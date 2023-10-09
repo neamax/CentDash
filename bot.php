@@ -72,7 +72,7 @@ if(strpos($text, "/start ") !== false){
 if($data == "agentsList" && ($from_id == $admin || $userInfo['isAdmin'] == true)){
     $keys = getAgentsList();
     if($keys != null) editText($message_id,$mainValues['agents_list'], $keys);
-    else alert("نماینده ای یافت نشد");
+    else alert("No Agents");
 }
 if(preg_match('/^agentDetails(\d+)/',$data,$match) && ($from_id == $admin || $userInfo['isAdmin'] == true)){
     $userDetail = bot('getChat',['chat_id'=>$match[1]])->result;
